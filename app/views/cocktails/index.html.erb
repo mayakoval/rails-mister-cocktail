@@ -1,8 +1,18 @@
-<h1>Fancy a drink?</h1>
-<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-light' %>
-<ul>
-   <% @cocktails.each do |cocktail| %>
-   <li><%= cocktail.name %></li>
-   <td><%= link_to 'Show', cocktail %></td>
-   <% end %>
-</ul>
+<div class="banner">
+    <h1 class="text-center mb-4">Fancy some...</h1>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="cards">
+		  <ul>
+		  	<div class="col-6">
+			    <% @cocktails.each do |cocktail| %>
+				    <%= link_to cocktail_path(cocktail), class: "card" do %>
+				    <p><%= cocktail.name %></p>
+			        <% end %>
+			    <% end %>
+		    </div>
+		  </ul>
+	</div>
+</div>
+<%= link_to 'Add a new cocktail', new_cocktail_path, class: 'btn btn-light' %> </div>

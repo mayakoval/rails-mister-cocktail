@@ -9,6 +9,7 @@ class DosesController < ApplicationController
   	# get cocktail_id from url, won't be needed in dose_param
   	@cocktail = Cocktail.find(params[:cocktail_id])
   	@dose = Dose.new(dose_params)
+    # attach cocktail above to the new dose
   	@dose.cocktail = @cocktail
 
   	if @dose.save
