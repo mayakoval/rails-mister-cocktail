@@ -1,17 +1,18 @@
 <div class="banner">
-    <h1 class="text-center mb-4">Fancy some...</h1>
+    <h1 id="top-banner-text">Fancy some...</h1>
+    <h1 id="bottom-banner-text">?</h1>
 </div>
 <div class="container">
 	<div class="row">
 		<div class="cards">
 		  <ul>
-		  	<div class="col-6">
-			    <% @cocktails.each do |cocktail| %>
-				    <%= link_to cocktail_path(cocktail), class: "card" do %>
-				    <p><%= cocktail.name %></p>
-			        <% end %>
-			    <% end %>
-		    </div>
+		    <% @cocktails.each do |cocktail| %>
+			    <%= link_to cocktail_path(cocktail) do %>
+			     <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+			    	<p><%= cocktail.name %></p>
+			    </div>
+		        <% end %>
+		    <% end %>
 		  </ul>
 	</div>
 </div>

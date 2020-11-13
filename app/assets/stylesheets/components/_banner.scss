@@ -2,9 +2,19 @@
   background-image: url(https://images.unsplash.com/photo-1494962227006-107baac595eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2853&q=80);
   background-size: cover;
   background-position: center;
-  padding: 200px 0px;
+  padding: 150px 0;
 }
 
 .banner h1 {
   color: white;
-}
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 8px 8px rgba(56, 219, 0, 0.2);
+  &#top-banner-text {
+    padding-left: 1em;
+    padding-bottom: 3em;
+  }
+ &#bottom-banner-text {
+ 	padding-left: 48rem;
+ }
+} 
